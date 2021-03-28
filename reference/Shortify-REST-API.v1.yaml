@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.0.3
 info:
   title: Shortify REST API
   description: |-
-    **Shortify** converts your long URL into an eight-character *'shorty'*.
+    **Shortify** converts your long URL into an eight-character short URL (a *'shorty'*).
 
     ## Install it
 
@@ -17,8 +17,8 @@ info:
 
     The following 'endpoints' (such as `POST /create`) provide reference documentation for the Shortify REST API. To try out API calls:
 
-    1. Navigate to an endpoint
-    2. Click **Try it out** - in the right-hand (black) panel
+    1. Navigate to an endpoint and click to expand it.
+    2. Click **Try it out**
     3. Customise the **Request body** and/or **Parameters**.
     4. Click **Execute**.
 
@@ -51,7 +51,7 @@ paths:
         - Endpoints
   /create:
     post:
-      summary: Create or update a shorty
+      summary: Create a shorty
       requestBody:
         required: true
         content:
@@ -135,7 +135,7 @@ components:
           updatedAt:
             type: string
             minLength: 1
-            description: 'The date the shorty was last updated (in [ISO8601 format](https://www.w3.org/TR/NOTE-datetime))'
+            description: 'Same as `createdAt`'
             example: '2021-03-27T11:56:31.316Z'
             readOnly: true
           __v:
